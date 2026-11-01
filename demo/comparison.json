@@ -1,0 +1,732 @@
+{
+  "format": "sftdiff.comparison.v1",
+  "summary": {
+    "before_rows": 6,
+    "after_rows": 6,
+    "changed": 4,
+    "unchanged": 1,
+    "added": 1,
+    "removed": 1,
+    "warning_rows": 2,
+    "before_targets": 12,
+    "after_targets": 14
+  },
+  "before_header": {
+    "sftdiff": 1,
+    "label_alignment": "unshifted",
+    "tokenizer": {
+      "name": "sftdiff/synthetic-demo-v1",
+      "fingerprint": "d59229537711c9c10eb15a1a51c915090289855d86a794d7f2355c4a4d1cebb9"
+    },
+    "metadata": {
+      "synthetic": true,
+      "note": "Hand-authored token evidence, not measured model output.",
+      "packing": false,
+      "pipeline": "baseline fixture"
+    }
+  },
+  "after_header": {
+    "sftdiff": 1,
+    "label_alignment": "unshifted",
+    "tokenizer": {
+      "name": "sftdiff/synthetic-demo-v1",
+      "fingerprint": "d59229537711c9c10eb15a1a51c915090289855d86a794d7f2355c4a4d1cebb9"
+    },
+    "metadata": {
+      "synthetic": true,
+      "note": "Hand-authored token evidence, not measured model output.",
+      "packing": false,
+      "pipeline": "changed fixture"
+    }
+  },
+  "rows": [
+    {
+      "id": "order-001-unchanged",
+      "status": "unchanged",
+      "changes": [],
+      "before": {
+        "id": "order-001-unchanged",
+        "tokens": [
+          "<bos>",
+          "<user>",
+          "Name",
+          "a",
+          "color",
+          "<assistant>",
+          "Blue",
+          "<eos>"
+        ],
+        "input_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "labels": [
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          6,
+          7
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "after": {
+        "id": "order-001-unchanged",
+        "tokens": [
+          "<bos>",
+          "<user>",
+          "Name",
+          "a",
+          "color",
+          "<assistant>",
+          "Blue",
+          "<eos>"
+        ],
+        "input_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "labels": [
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          6,
+          7
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "opcodes": [
+        [
+          "equal",
+          0,
+          8,
+          0,
+          8
+        ]
+      ],
+      "warnings": {
+        "before": [],
+        "after": []
+      },
+      "before_targets": 2,
+      "after_targets": 2
+    },
+    {
+      "id": "order-002-mask-drift",
+      "status": "changed",
+      "changes": [
+        "labels"
+      ],
+      "before": {
+        "id": "order-002-mask-drift",
+        "tokens": [
+          "<bos>",
+          "<user>",
+          "Name",
+          "a",
+          "color",
+          "<assistant>",
+          "Blue",
+          "<eos>"
+        ],
+        "input_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "labels": [
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          6,
+          7
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "after": {
+        "id": "order-002-mask-drift",
+        "tokens": [
+          "<bos>",
+          "<user>",
+          "Name",
+          "a",
+          "color",
+          "<assistant>",
+          "Blue",
+          "<eos>"
+        ],
+        "input_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "labels": [
+          -100,
+          -100,
+          2,
+          3,
+          4,
+          -100,
+          6,
+          7
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "opcodes": [
+        [
+          "equal",
+          0,
+          8,
+          0,
+          8
+        ]
+      ],
+      "warnings": {
+        "before": [],
+        "after": []
+      },
+      "before_targets": 2,
+      "after_targets": 5
+    },
+    {
+      "id": "order-003-answer-truncated",
+      "status": "changed",
+      "changes": [
+        "tokens",
+        "labels",
+        "attention"
+      ],
+      "before": {
+        "id": "order-003-answer-truncated",
+        "tokens": [
+          "<bos>",
+          "<user>",
+          "Name",
+          "a",
+          "color",
+          "<assistant>",
+          "Blue",
+          "<eos>"
+        ],
+        "input_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "labels": [
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          6,
+          7
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "after": {
+        "id": "order-003-answer-truncated",
+        "tokens": [
+          "<bos>",
+          "<user>",
+          "Name",
+          "a",
+          "color"
+        ],
+        "input_ids": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "labels": [
+          -100,
+          -100,
+          -100,
+          -100,
+          -100
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "opcodes": [
+        [
+          "equal",
+          0,
+          5,
+          0,
+          5
+        ],
+        [
+          "delete",
+          5,
+          8,
+          5,
+          5
+        ]
+      ],
+      "warnings": {
+        "before": [],
+        "after": [
+          "No effective supervised targets after the standard causal shift."
+        ]
+      },
+      "before_targets": 2,
+      "after_targets": 0
+    },
+    {
+      "id": "order-004-eos-removed",
+      "status": "changed",
+      "changes": [
+        "tokens",
+        "labels",
+        "attention"
+      ],
+      "before": {
+        "id": "order-004-eos-removed",
+        "tokens": [
+          "<bos>",
+          "<user>",
+          "Name",
+          "a",
+          "color",
+          "<assistant>",
+          "Blue",
+          "<eos>"
+        ],
+        "input_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "labels": [
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          6,
+          7
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "after": {
+        "id": "order-004-eos-removed",
+        "tokens": [
+          "<bos>",
+          "<user>",
+          "Name",
+          "a",
+          "color",
+          "<assistant>",
+          "Blue"
+        ],
+        "input_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "labels": [
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          6
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "opcodes": [
+        [
+          "equal",
+          0,
+          7,
+          0,
+          7
+        ],
+        [
+          "delete",
+          7,
+          8,
+          7,
+          7
+        ]
+      ],
+      "warnings": {
+        "before": [],
+        "after": []
+      },
+      "before_targets": 2,
+      "after_targets": 1
+    },
+    {
+      "id": "order-005-padding",
+      "status": "changed",
+      "changes": [
+        "labels"
+      ],
+      "before": {
+        "id": "order-005-padding",
+        "tokens": [
+          "<bos>",
+          "<user>",
+          "Name",
+          "a",
+          "color",
+          "<assistant>",
+          "Blue",
+          "<eos>",
+          "<pad>",
+          "<pad>"
+        ],
+        "input_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8
+        ],
+        "labels": [
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          6,
+          7,
+          -100,
+          -100
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "after": {
+        "id": "order-005-padding",
+        "tokens": [
+          "<bos>",
+          "<user>",
+          "Name",
+          "a",
+          "color",
+          "<assistant>",
+          "Blue",
+          "<eos>",
+          "<pad>",
+          "<pad>"
+        ],
+        "input_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8
+        ],
+        "labels": [
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          6,
+          7,
+          8,
+          8
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "opcodes": [
+        [
+          "equal",
+          0,
+          10,
+          0,
+          10
+        ]
+      ],
+      "warnings": {
+        "before": [],
+        "after": [
+          "Padding positions have unmasked labels; review your objective."
+        ]
+      },
+      "before_targets": 2,
+      "after_targets": 4
+    },
+    {
+      "id": "order-006-removed",
+      "status": "removed",
+      "changes": [],
+      "before": {
+        "id": "order-006-removed",
+        "tokens": [
+          "<bos>",
+          "<user>",
+          "Name",
+          "a",
+          "color",
+          "<assistant>",
+          "Blue",
+          "<eos>"
+        ],
+        "input_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "labels": [
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          6,
+          7
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "after": null,
+      "opcodes": [
+        [
+          "delete",
+          0,
+          8,
+          0,
+          0
+        ]
+      ],
+      "warnings": {
+        "before": [],
+        "after": []
+      },
+      "before_targets": 2,
+      "after_targets": 0
+    },
+    {
+      "id": "order-007-added",
+      "status": "added",
+      "changes": [],
+      "before": null,
+      "after": {
+        "id": "order-007-added",
+        "tokens": [
+          "<bos>",
+          "<user>",
+          "Name",
+          "a",
+          "color",
+          "<assistant>",
+          "Blue",
+          "<eos>"
+        ],
+        "input_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "labels": [
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          -100,
+          6,
+          7
+        ],
+        "attention_mask": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "opcodes": [
+        [
+          "insert",
+          0,
+          0,
+          0,
+          8
+        ]
+      ],
+      "warnings": {
+        "before": [],
+        "after": []
+      },
+      "before_targets": 0,
+      "after_targets": 2
+    }
+  ]
+}

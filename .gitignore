@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+snapshots/
+.coverage
+.pytest_cache/
+demo-run/
+ci-demo/
+.devdeps/
+.hf-cache/
+.browser-preview/
+hf-demo/
+.package-smoke/
